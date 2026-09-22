@@ -1,0 +1,13 @@
+{
+  "name": "helpdesk-worker",
+  "version": "0.1.0",
+  "description": "Worker de traitement des tickets - HelpDesk Pro",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}

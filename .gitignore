@@ -1,0 +1,22 @@
+# Dépendances
+node_modules/
+
+# Configuration locale et secrets
+.env
+*.pem
+
+# Système et éditeur
+.DS_Store
+.vscode/
+
+# Rapports et artefacts
+coverage/
+*.log
+trivy-report.txt
+sbom.cdx.json
+
+# Terraform (chapitre 5)
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
