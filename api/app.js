@@ -1,5 +1,7 @@
 const express = require('express');
 const { creerStockage, PRIORITES } = require('./db');
+// AJOUT : lit la version déclarée dans api/package.json
+const { version } = require('./package.json');
 
 // Construit l'application Express. Le stockage est injectable (tests).
 function creerApp(stockage = creerStockage()) {
@@ -15,6 +17,12 @@ function creerApp(stockage = creerStockage()) {
     } catch (err) {
       res.status(503).json({ status: 'ko', erreur: err.message });
     }
+  });
+
+  // AJOUT : version déployée, utilisée par le pipeline pour vérifier ce qui tourne.
+  // APP_VERSION (variable d'environnement) prend le dessus si elle est définie.
+  app.get('/version', (_req, res) => {
+    res.json({ version: process.env.APP_VERSION || version });
   });
 
   app.get('/tickets', async (_req, res, next) => {
