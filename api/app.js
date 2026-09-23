@@ -1,6 +1,6 @@
 const express = require('express');
 const { creerStockage, PRIORITES } = require('./db');
-// AJOUT : lit la version déclarée dans api/package.json
+// AJOUT : lit la version déclarée dans api/package.json modifiééééééééééé!!!!
 const { version } = require('./package.json');
 
 // Construit l'application Express. Le stockage est injectable (tests).
