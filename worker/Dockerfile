@@ -8,3 +8,4 @@ COPY --chown=node:node . .
 # 3. Exécution sans privilèges
 USER node
 CMD ["node", "worker.js"]
+# fin
