@@ -7,5 +7,4 @@ RUN npm ci --omit=dev
 COPY --chown=node:node . .
 # 3. Exécution sans privilèges
 USER node
-EXPOSE 3000
-CMD ["node", "server.js"]
+CMD ["node", "worker.js"]
