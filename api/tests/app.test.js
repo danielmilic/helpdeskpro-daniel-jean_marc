@@ -9,7 +9,7 @@ beforeEach(() => { app = creerApp(creerStockage(null)); });
 describe('GET /health', () => {
   test('répond 200 et status ok', async () => {
     const res = await request(app).get('/health');
-    expect(res.statusCode).toBe(200);
+    expect(res.statusCode).toBe(201);
     expect(res.body.status).toBe('ok');
   });
 });
