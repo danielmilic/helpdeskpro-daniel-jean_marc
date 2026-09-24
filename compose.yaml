@@ -32,6 +32,7 @@ services:
     image: helpdesk-worker:0.1.0
     environment:
       DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      WORKER_INTERVAL_MS: ${WORKER_INTERVAL_MS}
     depends_on:
       db:
         condition: service_healthy
